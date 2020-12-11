@@ -1,4 +1,2 @@
-// TODO Implement this.
-export default function todo() {
-  return 42;
-}
+import Rect from './Rect';
+export default Rect;
