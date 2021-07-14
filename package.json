@@ -1,6 +1,6 @@
 {
   "name": "parsegraph-rect",
-  "version": "1.4.3-dev",
+  "version": "1.4.4-dev",
   "description": "rectangle class",
   "main": "dist/parsegraph-rect.js",
   "types": "dist/parsegraph-rect.d.ts",
