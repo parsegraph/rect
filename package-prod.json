@@ -1,6 +1,6 @@
 {
     "name": "parsegraph-rect",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "description": "rect",
     "main": "dist/parsegraph-rect.js",
     "types": "dist/parsegraph-rect.d.ts",
