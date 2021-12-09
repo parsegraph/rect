@@ -1,45 +1,45 @@
 var assert = require("assert");
-import Rect from "../dist/rect";
-import TestSuite from 'parsegraph-testsuite';
+import Rect from "../dist/parsegraph-rect";
+import TestSuite from "parsegraph-testsuite";
 
 describe("Package", function () {
-  it("works", ()=>{
-    const rectTests = new TestSuite('Rect');
+  it("works", () => {
+    const rectTests = new TestSuite("Rect");
 
-    rectTests.addTest('vMin', function() {
+    rectTests.addTest("vMin", function () {
       const r = new Rect(0, 0, 200, 200);
       if (r.vMin() !== -100) {
-        return 'vMin, expected -100, got ' + r.vMin();
+        return "vMin, expected -100, got " + r.vMin();
       }
     });
 
-    rectTests.addTest('vMax', function() {
+    rectTests.addTest("vMax", function () {
       const r = new Rect(0, 0, 200, 200);
       if (r.vMax() !== 100) {
-        return 'vMax, expected 100, got ' + r.vMax();
+        return "vMax, expected 100, got " + r.vMax();
       }
     });
 
-    rectTests.addTest('hMin', function() {
+    rectTests.addTest("hMin", function () {
       const r = new Rect(0, 0, 300, 200);
       if (r.hMin() !== -150) {
-        return 'vMin, expected -150, got ' + r.vMin();
+        return "vMin, expected -150, got " + r.vMin();
       }
     });
 
-    rectTests.addTest('hMax', function() {
+    rectTests.addTest("hMax", function () {
       const r = new Rect(0, 0, 300, 200);
       if (r.hMax() !== 150) {
-        return 'hMax, expected 150, got ' + r.vMax();
+        return "hMax, expected 150, got " + r.vMax();
       }
     });
 
-    rectTests.addTest('include', function() {
+    rectTests.addTest("include", function () {
       const r = new Rect(0, 0, 200, 200);
       r.include(0, 400, 200, 200);
 
       if (r.vMax() !== new Rect(0, 400, 200, 200).vMax()) {
-        return 'vMax failed to adjust';
+        return "vMax failed to adjust";
       }
       // console.log(r);
     });

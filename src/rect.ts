@@ -105,15 +105,15 @@ export default class Rect {
 
   toString(): string {
     return (
-      '[Rect x=' +
+      "[Rect x=" +
       this.x() +
-      ', y=' +
+      ", y=" +
       this.y() +
-      ', w=' +
+      ", w=" +
       this.width() +
-      ', h=' +
+      ", h=" +
       this.height() +
-      ']'
+      "]"
     );
   }
 
