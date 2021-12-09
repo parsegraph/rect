@@ -6,7 +6,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist-prod"),
     filename: "parsegraph-rect.js",
     globalObject: "this",
-    library: "parsegraph",
+    library: "parsegraph_rect",
     libraryTarget: "umd",
   },
   module: {
