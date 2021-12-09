@@ -136,7 +136,7 @@ export default class Rect {
   include(bx: number, by: number, bwidth: number, bheight: number): void {
     if (this.isNaN()) {
       this._x = bx;
-      this._y = bx;
+      this._y = by;
       this._width = bwidth;
       this._height = bheight;
       return;

@@ -43,7 +43,24 @@ describe("Package", function () {
       }
       // console.log(r);
     });
-  
+
+    rectTests.addTest("include nan", function () {
+      const r = new Rect();
+      r.include(0, 400, 200, 300);
+      if (r.x() != 0) {
+        return "x is wrong";
+      }
+      if (r.y() != 400) {
+        return "y is wrong";
+      }
+      if (r.width() != 200) {
+        return "width is wrong";
+      }
+      if (r.height() != 300) {
+        return "height is wrong";
+      }
+    });
+
     const results = rectTests.run();
     assert.ok(results.isSuccessful());
   });
