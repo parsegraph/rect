@@ -3990,11 +3990,6 @@ parse5@6.0.1:
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-6.0.1.tgz#e1a1c085c569b3dc08321184f19a39cc27f7c30b"
   integrity sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==
 
-parsegraph-testsuite@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/parsegraph-testsuite/-/parsegraph-testsuite-1.6.0.tgz#7048f919aca14b26105ab987c814771158a05f6d"
-  integrity sha512-mihg24Lc7S11770uWDHXgtUsGyEPEmYyZbd4tjJj1+QUvcxnagVEwvB/vetWjgFl10+ukYiq7BmcLd+evbFIXg==
-
 path-exists@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
