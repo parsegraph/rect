@@ -1,11 +1,13 @@
-import todo from ".";
+import Rect from ".";
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("demo");
   root.style.position = "relative";
 
+  const rect = new Rect(200, 200, 100, 100);
+
   const container = document.createElement("div");
-  container.innerHTML = `${todo()}`;
+  container.innerHTML = `${JSON.stringify(rect.toString())}`;
   container.style.position = "absolute";
   container.style.left = "0px";
   container.style.top = "0px";
