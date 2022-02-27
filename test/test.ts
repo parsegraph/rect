@@ -26,7 +26,11 @@ describe("Package", function () {
     const r = new Rect(0, 0, 200, 200);
     r.include(0, 400, 200, 200);
 
-    assert.equal(r.vMax(), new Rect(0, 400, 200, 200).vMax(), "vMax must adjust on include");
+    assert.equal(
+      r.vMax(),
+      new Rect(0, 400, 200, 200).vMax(),
+      "vMax must adjust on include"
+    );
   });
 
   it("include nan", function () {
