@@ -1,67 +1,40 @@
-var assert = require("assert");
+const { assert } = require("chai");
 import Rect from "../src/index";
-import TestSuite from "parsegraph-testsuite";
 
 describe("Package", function () {
-  it("works", () => {
-    const rectTests = new TestSuite("Rect");
+  it("vMin", function () {
+    const r = new Rect(0, 0, 200, 200);
+    assert.equal(r.vMin(), -100, "vMin");
+  });
 
-    rectTests.addTest("vMin", function () {
-      const r = new Rect(0, 0, 200, 200);
-      if (r.vMin() !== -100) {
-        return "vMin, expected -100, got " + r.vMin();
-      }
-    });
+  it("vMax", function () {
+    const r = new Rect(0, 0, 200, 200);
+    assert.equal(r.vMax(), 100, "vMax");
+  });
 
-    rectTests.addTest("vMax", function () {
-      const r = new Rect(0, 0, 200, 200);
-      if (r.vMax() !== 100) {
-        return "vMax, expected 100, got " + r.vMax();
-      }
-    });
+  it("hMin", function () {
+    const r = new Rect(0, 0, 300, 200);
+    assert.equal(r.hMin(), -150, "vMin");
+  });
 
-    rectTests.addTest("hMin", function () {
-      const r = new Rect(0, 0, 300, 200);
-      if (r.hMin() !== -150) {
-        return "vMin, expected -150, got " + r.vMin();
-      }
-    });
+  it("hMax", function () {
+    const r = new Rect(0, 0, 300, 200);
+    assert.equal(r.hMax(), 150, "hMax");
+  });
 
-    rectTests.addTest("hMax", function () {
-      const r = new Rect(0, 0, 300, 200);
-      if (r.hMax() !== 150) {
-        return "hMax, expected 150, got " + r.vMax();
-      }
-    });
+  it("include", function () {
+    const r = new Rect(0, 0, 200, 200);
+    r.include(0, 400, 200, 200);
 
-    rectTests.addTest("include", function () {
-      const r = new Rect(0, 0, 200, 200);
-      r.include(0, 400, 200, 200);
+    assert.equal(r.vMax(), new Rect(0, 400, 200, 200).vMax(), "vMax must adjust on include");
+  });
 
-      if (r.vMax() !== new Rect(0, 400, 200, 200).vMax()) {
-        return "vMax failed to adjust";
-      }
-      // console.log(r);
-    });
-
-    rectTests.addTest("include nan", function () {
-      const r = new Rect();
-      r.include(0, 400, 200, 300);
-      if (r.x() != 0) {
-        return "x is wrong";
-      }
-      if (r.y() != 400) {
-        return "y is wrong";
-      }
-      if (r.width() != 200) {
-        return "width is wrong";
-      }
-      if (r.height() != 300) {
-        return "height is wrong";
-      }
-    });
-
-    const results = rectTests.run();
-    assert.ok(results.isSuccessful());
+  it("include nan", function () {
+    const r = new Rect();
+    r.include(0, 400, 200, 300);
+    assert.equal(r.x(), 0, "x");
+    assert.equal(r.y(), 400, "y");
+    assert.equal(r.width(), 200, "width");
+    assert.equal(r.height(), 300, "height");
   });
 });
