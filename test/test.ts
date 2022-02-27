@@ -1,5 +1,5 @@
 var assert = require("assert");
-import Rect from "../dist/parsegraph-rect";
+import Rect from "../src/index";
 import TestSuite from "parsegraph-testsuite";
 
 describe("Package", function () {
