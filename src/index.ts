@@ -99,6 +99,14 @@ export default class Rect {
     return this._width;
   }
 
+  w() {
+    return this.width();
+  }
+
+  h() {
+    return this.height();
+  }
+
   setWidth(width: number): void {
     this._width = width;
   }
